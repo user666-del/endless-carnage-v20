@@ -84,6 +84,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Boss, function (sprite5, oth
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite6, otherSprite6) {
     sprites.destroy(otherSprite6, effects.disintegrate, 500)
     info.changeLifeBy(-1)
+    b_count += -1
 })
 info.onScore(100, function () {
     zombie_boss = sprites.create(img`
